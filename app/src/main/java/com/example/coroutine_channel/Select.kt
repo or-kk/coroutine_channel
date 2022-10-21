@@ -25,7 +25,7 @@ fun main() = runBlocking<Unit> {
     val fasts = sayFast()
     val campuses = sayCampus()
     repeat (5) { // 5 times select
-        select<Unit> { // 먼저 끝내는 애만 듣는다. 
+        select<Unit> { // 먼저 끝내는 애만 듣는다.
             fasts.onReceive {
                 println("fast: $it")
             }
